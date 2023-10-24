@@ -7,7 +7,7 @@ int main() {
     int card, choice, additionalCards;
     char playAgain;
 
-    srand(time(NULL)); // крч это генератор случайных чисел
+    srand(time(NULL)); 
 
     
         playerScore = 0;
@@ -17,7 +17,7 @@ int main() {
 
         printf("Welcome to Game 21!\n\n");
 
-        while (additionalCards) { //вся игра для игрока
+        while (additionalCards) { 
             printf("Your move. Get a card? [1 - Yes / 0 - No]: ");
             scanf_s("%d", &choice);
 
@@ -25,16 +25,16 @@ int main() {
                 card = rand() % 9 + 2;
 
                 if (card == 8) {
-                    card = 2; //это идет в сумму для вальта
+                    card = 2; 
                 }
                 else if (card == 9) {
-                    card = 3; //для дамы
+                    card = 3; 
                 }
                 else if (card == 10) {
-                    card = 4; //король
+                    card = 4; 
                 }
                 else if (card == 11) {
-                    card = 11; //туз
+                    card = 11; 
                 }
 
                 printf("Your card: %d\n", card);
@@ -44,7 +44,7 @@ int main() {
                 additionalCards = 0;
             }
 
-            if (playerScore <= 21 && additionalCards) { //вся игра для компика
+            if (playerScore <= 21 && additionalCards) { 
                 card = rand() % 9 + 2;
 
                 if (card == 8) {
@@ -73,7 +73,7 @@ int main() {
 
         
         if (playerScore == computerScore || (playerScore > 21 && computerScore > 21)) {
-            printf("Draw!\n"); //ничья
+            printf("Draw!\n"); 
         }
         else if ((playerScore <= 21 && playerScore > computerScore) || computerScore > 21) {
             printf("You have won!\n");
