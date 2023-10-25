@@ -393,7 +393,9 @@ int main(void)
             game();
             break;
         case 2:
+            system("cls");
             if (start_game() == 3) return 0;
+            else game();
             break;
         case 3:
             return 0;
